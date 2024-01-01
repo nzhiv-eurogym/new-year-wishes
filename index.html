@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Новогодние поздравления :)</title>
+    <style>
+
+      body {
+          height: 100vh;
+          background: radial-gradient(ellipse at bottom, #34A65F 0%, #0F8A5F 100%);
+          overflow: hidden;
+          color: white;
+          text-align: center;
+          font-family: 'Inter';
+      }
+      
+      header {
+          padding: 10px;
+          color: white;
+          font-size: 24px;
+      }
+
+      #congratulation-container {
+          margin: 20px;
+      }
+
+      #congratulation-btn {
+          padding: 10px;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: #4CAF50; /* Зеленый цвет для кнопки */
+          color: white;
+          border: none;
+      }
+
+      #congratulation-btn:hover {
+          background-color: #45a049; /* Темнозеленый цвет при наведении */
+      }
+
+      #snowfall-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 1000;
+      }
+
+      .snowflake {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: linear-gradient(white, white); /* Workaround for Chromium's selective color inversion */
+          border-radius: 50%;
+          filter: drop-shadow(0 0 10px white);
+      }
+
+      .container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+
+
+      #logo-container {
+        display: flex;
+        align-items: center;
+        /*justify-content: center;
+        margin-bottom: 20px;*/
+      }
+
+      #logo-container img {
+        margin-right: 10px;
+      }
+    </style>
+</head>
+<body>
+      <div id="snow"></div>
+      <header>
+      <div id="logo-container">
+         <img src="1.svg" height="150px">
+         <img src="3.svg" height="450px">
+      </div>
+      </header>
+
+      <h1>Для вас пожелания от учеников нашей школы :)</h1>
+
+    <input type="checkbox" id="toggle_snow" checked="true" onclick="toggle_snow()"> ToggleSnow </input>
+    
+      <div id="congratulation-container">
+          <p id="congratulation-text"></p>
+      </div>
+
+      <button id="congratulation-btn">Хочу новогоднее пожелание</button>
+
+      <div id="snowfall-container"></div>
+
+    <script src="./PureSnow.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

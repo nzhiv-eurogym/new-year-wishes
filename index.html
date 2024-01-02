@@ -67,6 +67,9 @@
         align-items: center;
         /*justify-content: center;
         margin-bottom: 20px;*/
+        display: table; */
+        margin: 0 auto;
+        text-align: center;
       }
 
       #logo-container img {
@@ -77,14 +80,13 @@
 <body>
       <div id="snow"></div>
       <header>
-      <div id="logo-container" style="display: table; margin: 0 auto; text-align: center;">
+      <div id="logo-container">
          <img src="ny-logo.png" height="450px">
       </div>
       </header>
 
-      <h1>Для вас пожелания от учеников и учителей нашей школы :)</h1>
-
-    <input type="checkbox" id="toggle_snow" checked="true" onclick="toggle_snow()"> ToggleSnow </input>
+        <h2>С новым годом!<br/> Для вас пожелания от учеников нашей школы :)</h2>
+        <input type="checkbox" id="toggle_snow" checked="true" onclick="toggle_snow()"> ToggleSnow </input>
     
       <div id="congratulation-container">
           <p id="congratulation-text"></p>

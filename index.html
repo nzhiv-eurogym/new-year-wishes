@@ -139,5 +139,23 @@
 
     <script src="./PureSnow.js"></script>
     <script src="script.js"></script>
+    <script> 
+    
+        window.onload = function() {
+        const snowfallContainer = document.getElementById("snowfall-container");
+
+        function createSnowflakes() {
+            for (let i = 0; i < 100; i++) {  // Количество треугольников
+                let snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                snowflake.style.left = `${Math.random() * 100}vw`;  // Случайная позиция по горизонтали
+                snowflake.style.animationDuration = `${Math.random() * 3 + 7}s`; // Разное время падения
+                snowflake.style.animationDelay = `${Math.random() * 3}s`; // Задержка перед падением
+                snowfallContainer.appendChild(snowflake);
+            }
+        }
+        createSnowflakes();
+    }
+    </script>
 </body>
 </html>
